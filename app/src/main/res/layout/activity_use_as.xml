@@ -4,7 +4,6 @@
     android:id="@+id/android_3"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:clipToOutline="true"
     android:background="#5FA0B6">
 
 
@@ -27,7 +26,7 @@
         android:layout_marginLeft="124dp"
         android:layout_marginTop="289dp"
         android:text="@string/voter"
-        android:textAppearanc="@style/voter" />
+        android:textAppearance="@style/voter" />
 
     <View
         android:id="@+id/hand_with_f"
