@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TMVoterApp</string>
+    <string name="use_as">USE AS</string>
+    <string name="logo_here">LOGO HERE</string>
+    <string name="voter">VOTER</string>
+    <string name="admin">ADMIN</string>
+
+    <string name="enter_passw">Enter Password</string>
+
+</resources>

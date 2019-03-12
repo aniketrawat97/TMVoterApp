@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToOutline="true"
+    android:background="#5FA0B6">
+
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="323dp"
+        android:layout_height="69dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="262dp"
+        android:background="@drawable/rectangle_2" />
+
+    <TextView
+        android:id="@+id/voter"
+        android:layout_width="287.08dp"
+        android:layout_height="66.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="289dp"
+        android:text="@string/voter"
+        android:textAppearanc="@style/voter" />
+
+    <View
+        android:id="@+id/hand_with_f"
+        android:layout_width="43dp"
+        android:layout_height="59dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="262dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="266dp"
+        android:background="@drawable/hand_with_f"
+        />
+
+    <View
+        android:id="@+id/rectangle_22"
+        android:layout_width="323dp"
+        android:layout_height="69dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="358dp"
+        android:background="@drawable/rectangle_2" />
+
+    <TextView
+        android:id="@+id/admin"
+        android:layout_width="287.08dp"
+        android:layout_height="66.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="369dp"
+        android:text="@string/admin"
+        android:textAppearance="@style/admin" />
+
+    <View
+        android:id="@+id/smallgear_b"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="261dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/smallgear_b"
+        />
+
+
+    <TextView
+        android:id="@+id/use_as"
+        android:layout_width="191dp"
+        android:layout_height="68dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="182dp"
+        android:text="@string/use_as"
+        android:textAppearance="@style/use_as" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/logo_here"
+        android:layout_width="93dp"
+        android:layout_height="91dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/logo_here"
+        android:textAppearance="@style/logo_here" />
+
+    <View
+        android:id="@+id/rectangle_222"
+        android:layout_width="248dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="464dp"
+        android:background="@drawable/rectangle_2" />
+
+    <View
+        android:id="@+id/rectangle_2222"
+        android:layout_width="248dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="221dp"
+        android:background="@drawable/rectangle_2" />
+
+
+
+
+</RelativeLayout>
