@@ -6,5 +6,10 @@
     <string name="admin">ADMIN</string>
 
     <string name="enter_passw">Enter Password</string>
+    <string name="roleplayers">Roleplayers</string>
+    <string name="generate_me">Generate Meeting Code</string>
+    <string name="toastmaster">Toastmaster of the day</string>
+    <string name="tm_zakiuddi">TM Zakiuddin Gorakhpurwala</string>
+
 
 </resources>

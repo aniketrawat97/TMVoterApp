@@ -4,7 +4,6 @@
     android:id="@+id/android_2"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:clipToOutline="true"
     android:background="#5FB6A1"
     >
 
@@ -29,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="42dp"
             android:layout_marginTop="221dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_2_roundcorner" />
 
         <View
             android:id="@+id/rectangle_2"
@@ -39,7 +38,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="129dp"
             android:layout_marginTop="220dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_2_roundcorner" />
 
         <View
             android:id="@+id/rectangle_3"
@@ -49,7 +48,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="217dp"
             android:layout_marginTop="218dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_2_roundcorner" />
 
         <View
             android:id="@+id/rectangle_4"
@@ -59,7 +58,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="305dp"
             android:layout_marginTop="216dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_2_roundcorner" />
 
         <View
             android:id="@+id/line_1"
@@ -69,7 +68,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="94dp"
             android:layout_marginTop="158dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_2_roundcorner" />
 
         <View
             android:id="@+id/line_2"
@@ -79,7 +78,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="99dp"
             android:layout_marginTop="340dp"
-            android:background="@drawable/rectangle_2" />
+            android:background="@drawable/rectangle_voter" />
 
     </RelativeLayout>
 

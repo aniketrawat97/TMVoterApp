@@ -1,23 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/android_2_4"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:clipToOutline="true"
-    android:background="#FFFFFF"
-    >
+    android:background="#FFFFFF">
 
-    <View
-        android:id="@+id/group_7_3"
-        android:layout_width="361dp"
-        android:layout_height="135dp"
+
+    <TextView
+        android:id="@+id/roleplayers"
+        android:layout_width="285dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="481dp"
-        android:background="@drawable/group_7_3"
-        />
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/roleplayers"
+        android:textAppearance="@style/roleplayers" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
 
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="409.86dp"
+            android:layout_height="155.15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="86.39dp"
+            android:background="@drawable/roleplayers" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/toastmaster"
+            android:layout_width="367.74dp"
+            android:layout_height="31.03dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31.88dp"
+            android:layout_marginTop="115.12dp"
+            android:text="@string/toastmaster"
+            android:textAppearance="@style/toastmaster" />
+
+        <View
+            android:id="@+id/plus"
+            android:layout_width="31.88dp"
+            android:layout_height="32.18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="354.07dp"
+            android:layout_marginTop="118.57dp"
+            android:background="@drawable/plus" />
+
+        <TextView
+            android:id="@+id/tm_zakiuddi"
+            android:layout_width="379.12dp"
+            android:layout_height="31.03dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31.88dp"
+            android:layout_marginTop="173.73dp"
+            android:text="@string/tm_zakiuddi"
+            android:textAppearance="@style/tm_zakiuddi" />
+
+
+    </LinearLayout>
+
+
+    </RelativeLayout>

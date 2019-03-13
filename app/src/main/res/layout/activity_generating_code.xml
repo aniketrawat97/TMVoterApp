@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/android_password"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#EC7373"
-    >
+    android:id="@+id/android_2_8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5FB6A1">
+
 
     <TextView
         android:id="@+id/enter_passw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="137dp"
+        android:layout_marginLeft="145dp"
         android:layout_marginTop="105dp"
         android:text="@string/enter_passw"
         android:textAppearance="@style/enter_passw" />
@@ -20,16 +20,18 @@
         android:id="@+id/line_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/enter_passw"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="158dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/line" />
 
     <ImageView
         android:id="@+id/rectangle_1"
         android:layout_width="71dp"
         android:layout_height="69dp"
+        android:layout_below="@id/line_1"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/rectangle_2_roundcorner"
         />
 
@@ -37,24 +39,28 @@
         android:id="@+id/rectangle_2"
         android:layout_width="71dp"
         android:layout_height="69dp"
-        android:layout_marginLeft="129dp"
-        android:layout_marginTop="220dp"
+        android:layout_below="@id/line_1"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/rectangle_2_roundcorner" />
+
 
     <ImageView
         android:id="@+id/rectangle_3"
         android:layout_width="71dp"
         android:layout_height="69dp"
-        android:layout_marginLeft="217dp"
-        android:layout_marginTop="220dp"
+        android:layout_below="@id/line_1"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/rectangle_2_roundcorner" />
 
     <ImageView
         android:id="@+id/rectangle_4"
         android:layout_width="71dp"
         android:layout_height="69dp"
-        android:layout_marginLeft="305dp"
-        android:layout_marginTop="220dp"
+        android:layout_below="@id/line_1"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/rectangle_2_roundcorner" />
 
 
@@ -63,9 +69,30 @@
         android:id="@+id/line_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/rectangle_1"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/line" />
 
+    <ImageView
+        android:id="@+id/codebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_2"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/meetingcode"
+        />
+
+    <TextView
+        android:id="@+id/generate_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="455dp"
+        android:text="@string/generate_me"
+        android:textAppearance="@style/generate_me"
+        />
 
 </RelativeLayout>
+
