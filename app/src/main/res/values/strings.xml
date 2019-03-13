@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">TMVoterApp</string>
     <string name="use_as">USE AS</string>
-    <string name="logo_here">LOGO HERE</string>
+    <string name="logo">LOGO</string>
+    <string name="here">HERE</string>
+
     <string name="voter">VOTER</string>
     <string name="admin">ADMIN</string>
 

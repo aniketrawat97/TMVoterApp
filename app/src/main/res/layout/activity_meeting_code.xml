@@ -28,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="42dp"
             android:layout_marginTop="221dp"
-            android:background="@drawable/rectangle_2_roundcorner" />
+            android:background="@drawable/rectangle_code" />
 
         <View
             android:id="@+id/rectangle_2"
@@ -38,7 +38,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="129dp"
             android:layout_marginTop="220dp"
-            android:background="@drawable/rectangle_2_roundcorner" />
+            android:background="@drawable/rectangle_code" />
 
         <View
             android:id="@+id/rectangle_3"
@@ -48,7 +48,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="217dp"
             android:layout_marginTop="218dp"
-            android:background="@drawable/rectangle_2_roundcorner" />
+            android:background="@drawable/rectangle_code" />
 
         <View
             android:id="@+id/rectangle_4"
@@ -58,7 +58,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="305dp"
             android:layout_marginTop="216dp"
-            android:background="@drawable/rectangle_2_roundcorner" />
+            android:background="@drawable/rectangle_code" />
 
         <View
             android:id="@+id/line_1"
@@ -68,7 +68,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="94dp"
             android:layout_marginTop="158dp"
-            android:background="@drawable/rectangle_2_roundcorner" />
+            android:background="@drawable/rectangle_code" />
 
         <View
             android:id="@+id/line_2"

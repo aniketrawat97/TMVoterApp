@@ -32,7 +32,7 @@
         android:layout_below="@id/line_1"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rectangle_2_roundcorner"
+        android:background="@drawable/rectangle_code"
         />
 
     <ImageView
@@ -42,7 +42,7 @@
         android:layout_below="@id/line_1"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rectangle_2_roundcorner" />
+        android:background="@drawable/rectangle_code" />
 
 
     <ImageView
@@ -52,7 +52,7 @@
         android:layout_below="@id/line_1"
         android:layout_marginLeft="220dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rectangle_2_roundcorner" />
+        android:background="@drawable/rectangle_code" />
 
     <ImageView
         android:id="@+id/rectangle_4"
@@ -61,7 +61,7 @@
         android:layout_below="@id/line_1"
         android:layout_marginLeft="310dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rectangle_2_roundcorner" />
+        android:background="@drawable/rectangle_code" />
 
 
 
