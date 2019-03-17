@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="33dp"
+            android:textAppearance="@style/roleplayers" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/prepspeaker"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/prepspeaker"
+        android:background="#EC7373"
+        android:textAlignment="center"
+        android:textAppearance="@style/prepared_sp" />
+
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/prepspeaker"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+    <RelativeLayout
+        android:id="@+id/cardone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#EC7373">
+
+
+    <TextView
+        android:id="@+id/best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/best"
+        android:textAppearance="@style/prepared_sp" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tm_shurti"
+        android:layout_marginLeft="115dp"
+        android:layout_toRightOf="@id/best"
+        android:textAppearance="@style/prepared_sp" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count"
+        android:layout_marginLeft="115dp"
+        android:layout_toRightOf="@id/name"
+        android:textAppearance="@style/prepared_sp" />
+
+
+</RelativeLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/prepspeaker"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/cardtwo"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#EC7373">
+
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second"
+            android:textAppearance="@style/prepared_sp" />
+
+
+        <TextView
+            android:id="@+id/namesecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tm_shurti"
+            android:layout_marginLeft="87dp"
+            android:layout_toRightOf="@id/second"
+            android:textAppearance="@style/prepared_sp" />
+
+        <TextView
+            android:id="@+id/seccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count"
+            android:layout_marginLeft="115dp"
+            android:layout_toRightOf="@id/namesecond"
+            android:textAppearance="@style/prepared_sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/prepspeaker"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+
+    <TextView
+        android:id="@+id/ttspeaker"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/ttspeaker"
+        android:background="#5FA0B6"
+        android:textAlignment="center"
+        android:textAppearance="@style/prepared_sp" />
+
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/prepspeaker"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardthree"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#5FA0B6">
+
+
+        <TextView
+            android:id="@+id/ttbest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/best"
+            android:textAppearance="@style/prepared_sp" />
+
+
+        <TextView
+            android:id="@+id/ttname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tm_shurti"
+            android:layout_marginLeft="115dp"
+            android:layout_toRightOf="@id/ttbest"
+            android:textAppearance="@style/prepared_sp" />
+
+        <TextView
+            android:id="@+id/ttbcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count"
+            android:layout_marginLeft="115dp"
+            android:layout_toRightOf="@id/ttname"
+            android:textAppearance="@style/prepared_sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_5"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/prepspeaker"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/bestpreparedspeaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bestpreparedspeaker"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="33dp"
+            android:textAppearance="@style/roleplayers" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardspeakerone"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+    <TextView
+        android:id="@+id/speakerone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Speakerone"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textAppearance="@style/toastmaster"
+        />
+
+    <TextView
+        android:id="@+id/speakername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speakerone"
+        android:text="@string/tm_zakiuddi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/tm_zakiuddi"
+        />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/relativetmofday"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardspeakertwo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+    <TextView
+        android:id="@+id/speakertwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Speakertwo"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textAppearance="@style/toastmaster"
+        />
+
+    <TextView
+        android:id="@+id/speakertwoname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speakertwo"
+        android:text="@string/tm_zakiuddi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/tm_zakiuddi"
+        />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/relativetmofday"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardspeakerthree"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+    <TextView
+        android:id="@+id/speakerthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Speakerthree"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textAppearance="@style/toastmaster"
+        />
+
+    <TextView
+        android:id="@+id/speakerthreename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speakerthree"
+        android:text="@string/tm_zakiuddi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/tm_zakiuddi"
+        />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/relativetmofday"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardspeakerfour"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+        <TextView
+            android:id="@+id/speakerfour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Speakerfour"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/toastmaster"
+            />
+
+        <TextView
+            android:id="@+id/speakerfourname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/speakerfour"
+            android:text="@string/tm_zakiuddi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/tm_zakiuddi"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/relativetmofday"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+
+
+
+
+
+</LinearLayout>

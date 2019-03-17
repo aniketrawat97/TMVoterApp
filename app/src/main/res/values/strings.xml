@@ -6,12 +6,40 @@
 
     <string name="voter">VOTER</string>
     <string name="admin">ADMIN</string>
-
+    <string name="prepared_sp">Prepared Speakers</string>
     <string name="enter_passw">Enter Password</string>
     <string name="roleplayers">Roleplayers</string>
     <string name="generate_me">Generate Meeting Code</string>
     <string name="toastmaster">Toastmaster of the day</string>
     <string name="tm_zakiuddi">TM Zakiuddin Gorakhpurwala</string>
-
+    <string name="ttmaster">Tabletopic Master</string>
+    <string name="auxroleplayers">Auxilary Roleplayers</string>
+    <string name="timer">Timer</string>
+    <string name="ahcounter">Ah Counter</string>
+    <string name="harkmaster">Hark Master</string>
+    <string name="preparedspeaker">Prepared Speakers</string>
+    <string name="Speakerone">Speaker 1</string>
+    <string name="evaluaterone">Evaluater 1</string>
+    <string name="Speakertwo">Speaker 2</string>
+    <string name="evaluatertwo">Evaluter 2</string>
+    <string name="bestpreparedspeaker">Best Prepared Speaker</string>
+    <string name="Speakerthree">Speaker 3</string>
+    <string name="Speakerfour">Speaker 4</string>
+    <string name="bestroleplayer">Best Roleplayers</string>
+    <string name="evaluaterthree">Evaluater 3</string>
+    <string name="evaluaterfour">Evaluater 4</string>
+    <string name="bestevaluater">Best Evaluater</string>
+    <string name="bestauxroleplayers">Best Auxilary Roleplayer</string>
+    <string name="result">Result</string>
+    <string name="prepspeaker">Prepared Speaker</string>
+    <string name="best">Best</string>
+    <string name="count">0</string>
+    <string name="tm_shurti">Shruti Jain</string>
+    <string name="second">Second</string>
+    <string name="ttspeaker">TableTopic Speaker</string>
+    <string name="thank_you">Thank You for Voting</string>
+    <string name="generate_meeting_code">Generate Meeting code</string>
+    <string name="enter_meeting_code">Enter Meeting code</string>
+    <string name="logo_here">Logo Here</string>
 
 </resources>

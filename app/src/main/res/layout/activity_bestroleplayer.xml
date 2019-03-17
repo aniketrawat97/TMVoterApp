@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
@@ -12,17 +11,16 @@
         android:background="#FFFFFF">
 
 
-    <TextView
-        android:id="@+id/roleplayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/roleplayers"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="33dp"
-        android:textAppearance="@style/roleplayers" />
+        <TextView
+            android:id="@+id/bestroleplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bestroleplayer"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="33dp"
+            android:textAppearance="@style/roleplayers" />
 
     </LinearLayout>
-
 
 
     <RelativeLayout
@@ -32,25 +30,15 @@
         android:background="#5FA0B6">
 
 
-        <TextView
-            android:id="@+id/tmofday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/toastmaster"
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="30dp"
-            android:textAppearance="@style/toastmaster"
-            />
-
-        <ImageView
-            android:id="@+id/plus"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/smallgear_blue"
-            android:layout_toRightOf="@id/tmofday"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="69dp"
-            />
+    <TextView
+        android:id="@+id/tmofday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toastmaster"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textAppearance="@style/toastmaster"
+        />
 
         <TextView
             android:id="@+id/tmofdayname"
@@ -91,29 +79,18 @@
         android:textAppearance="@style/ttmaster"
         />
 
-    <ImageView
-        android:id="@+id/plus2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/smallgear_blue"
-        android:layout_toRightOf="@id/ttmaster"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="125dp"
-        />
+        <TextView
+            android:id="@+id/ttmastername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ttmaster"
+            android:text="@string/tm_zakiuddi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/tm_zakiuddi"
+            />
 
-
-    <TextView
-        android:id="@+id/ttmastername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ttmaster"
-        android:text="@string/tm_zakiuddi"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:textAppearance="@style/tm_zakiuddi"
-        />
-
-   </RelativeLayout>
+    </RelativeLayout>
 
 
     <View
@@ -123,6 +100,7 @@
         android:layout_below="@id/cardttmaster"
         android:layout_marginLeft="65dp"
         android:background="#FFFFFF" />
+
 
     <RelativeLayout
         android:id="@+id/cardgeneralevaluater"
@@ -140,17 +118,6 @@
         android:layout_marginLeft="30dp"
         android:textAppearance="@style/ttmaster"
         />
-
-    <ImageView
-        android:id="@+id/plus3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/smallgear_blue"
-        android:layout_toRightOf="@id/generalevaluater"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="125dp"
-        />
-
 
         <TextView
             android:id="@+id/genralevaluaterName"
@@ -191,17 +158,6 @@
         android:textAppearance="@style/ttmaster"
         />
 
-    <ImageView
-        android:id="@+id/plus4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/smallgear_blue"
-        android:layout_toRightOf="@id/grammerian"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="125dp"
-        />
-
-
         <TextView
             android:id="@+id/grammerianname"
             android:layout_width="wrap_content"
@@ -214,17 +170,6 @@
             />
 
     </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </LinearLayout>

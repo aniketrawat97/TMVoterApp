@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1081549880275",
+    "firebase_url": "https://tmvoter-26397.firebaseio.com",
+    "project_id": "tmvoter-26397",
+    "storage_bucket": "tmvoter-26397.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081549880275:android:dfd64a83aab68dea",
+        "android_client_info": {
+          "package_name": "com.aniket.tmvoter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081549880275-n0le8np3tjudaqdfi4kirp3arjh71dc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8vmtSYDOXNxti6-DuT60-rCqeRvt-tpQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

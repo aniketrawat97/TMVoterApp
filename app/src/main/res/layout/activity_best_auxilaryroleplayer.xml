@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/bestauxroleplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="33dp"
+            android:text="@string/bestauxroleplayers"
+            android:textAppearance="@style/best_auxila" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/cardtimer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timer"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/toastmaster"
+            />
+
+        <TextView
+            android:id="@+id/timername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timer"
+            android:text="@string/tm_zakiuddi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/tm_zakiuddi"
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/relativetmofday"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:id="@+id/cardcounter"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+        <TextView
+            android:id="@+id/ahcounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ahcounter"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/ttmaster"
+            />
+
+
+        <TextView
+            android:id="@+id/ahcountername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ahcounter"
+            android:text="@string/tm_zakiuddi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/tm_zakiuddi"
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/cardttmaster"
+        android:layout_marginLeft="65dp"
+        android:background="#FFFFFF" />
+
+    <RelativeLayout
+        android:id="@+id/cardharkmaster"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#5FA0B6">
+
+
+        <TextView
+            android:id="@+id/harkmaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/harkmaster"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="30dp"
+            android:textAppearance="@style/ttmaster"
+            />
+
+
+        <TextView
+            android:id="@+id/harkmasterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/harkmaster"
+            android:text="@string/tm_zakiuddi"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/tm_zakiuddi"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

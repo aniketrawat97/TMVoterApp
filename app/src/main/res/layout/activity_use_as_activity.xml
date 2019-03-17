@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/android_3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,125 +12,150 @@
         android:id="@+id/cicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
         android:src="@drawable/circle"
-        />
-
-    <TextView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="55dp"
-        android:text="@string/logo"
-        android:textAppearance="@style/logo_here" />
-
-    <TextView
-        android:id="@+id/here"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="85dp"
-        android:text="@string/here"
-        android:textAppearance="@style/logo_here" />
-
+        app:layout_constraintBottom_toTopOf="@+id/use_as"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        app:layout_constraintVertical_chainStyle="packed" />
 
 
     <TextView
         android:id="@+id/use_as"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cicle"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="20dp"
+        android:layout_alignBottom="@id/cicle"
+        android:layout_marginBottom="15dp"
         android:text="@string/use_as"
-        android:textAppearance="@style/use_as" />
+        android:textAppearance="@style/use_as"
+        app:layout_constraintBottom_toTopOf="@+id/line_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cicle" />
 
     <View
         android:id="@+id/line_1"
         android:layout_width="300dp"
         android:layout_height="2dp"
-        android:layout_below="@id/use_as"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="65dp"
-        android:background="#FFFFFF" />
+        android:layout_marginBottom="45dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/voterbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/use_as" />
 
 
     <ImageView
         android:id="@+id/voterbox"
-        android:layout_width="360dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/line_1"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/rectangle_voter" />
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_alignBottom="@id/use_as"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rectangle_voter"
+        app:layout_constraintBottom_toTopOf="@+id/adminbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1"
+        android:onClick="voterClicked"/>
 
     <TextView
         android:id="@+id/votername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/line_1"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="70dp"
         android:text="@string/voter"
         android:textAppearance="@style/voter"
-        />
-
-    <ImageView
-        android:id="@+id/hand_with_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300.99dp"
-        android:layout_marginTop="332.48dp"
-        android:src="@drawable/hand_with_f"
-        android:background="#5FA0B6"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/voterbox"
+        app:layout_constraintEnd_toStartOf="@+id/voterbox"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toEndOf="@+id/voterbox"
+        app:layout_constraintTop_toBottomOf="@+id/voterbox"
+        app:layout_constraintVertical_bias="0.504" />
 
 
     <ImageView
         android:id="@+id/adminbox"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
-        android:layout_below="@id/voterbox"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/rectangle_voter" />
+        android:layout_alignBottom="@id/voterbox"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/rectangle_voter"
+        app:layout_constraintBottom_toTopOf="@+id/line_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voterbox" />
 
     <TextView
         android:id="@+id/admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/voterbox"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/admin"
-        android:textAppearance="@style/admin"
-        />
-
-    <ImageView
-        android:id="@+id/smallgear_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="299.84dp"
-        android:layout_marginTop="446.9dp"
-        android:src="@drawable/smallgear_b"
-        />
+        android:textAppearance="@style/voter"
+        app:layout_constraintBottom_toTopOf="@+id/adminbox"
+        app:layout_constraintEnd_toStartOf="@+id/adminbox"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/adminbox"
+        app:layout_constraintTop_toBottomOf="@+id/adminbox"
+        app:layout_constraintVertical_bias="0.487" />
 
 
     <View
         android:id="@+id/line_2"
         android:layout_width="300dp"
         android:layout_height="2dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginLeft="65dp"
-        android:background="#FFFFFF" />
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminbox" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/voterbox"
+        app:layout_constraintStart_toEndOf="@+id/votername"
+        app:layout_constraintTop_toTopOf="@+id/voterbox"
+        app:srcCompat="@drawable/hand" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/adminbox"
+        app:layout_constraintStart_toEndOf="@+id/admin"
+        app:layout_constraintTop_toTopOf="@+id/adminbox"
+        app:srcCompat="@drawable/smallgear_blue" />
+
+    <TextView
+        android:id="@+id/logo_here"
+        android:layout_width="77dp"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/logo_here"
+        android:textAppearance="@style/logo_here"
+        app:layout_constraintBottom_toBottomOf="@+id/cicle"
+        app:layout_constraintEnd_toEndOf="@+id/cicle"
+        app:layout_constraintStart_toStartOf="@+id/cicle"
+        app:layout_constraintTop_toTopOf="@+id/cicle" />
 
 
-
-
-
-
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
