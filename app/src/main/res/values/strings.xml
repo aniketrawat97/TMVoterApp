@@ -41,5 +41,10 @@
     <string name="generate_meeting_code">Generate Meeting code</string>
     <string name="enter_meeting_code">Enter Meeting code</string>
     <string name="logo_here">Logo Here</string>
+    <string name="three">Third</string>
+    <string name="generalevaluater">General Evaluater</string>
+    <string name="grammerian">Grammerian</string>
+
+
 
 </resources>

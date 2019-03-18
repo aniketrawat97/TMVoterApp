@@ -111,6 +111,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="CustomSpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/plust</item>
+    </style>
+
+
+
 
 
 
