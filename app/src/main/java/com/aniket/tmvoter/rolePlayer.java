@@ -46,10 +46,7 @@ public class rolePlayer extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-
-
-
+        WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
         mydb = new DatabaseHelper(this);
 
@@ -62,9 +59,6 @@ public class rolePlayer extends AppCompatActivity {
         ttmastertitle = (TextView) findViewById(R.id.ttmaster);
         genevaluatertitle = (TextView) findViewById(R.id.generalevaluater);
         grammeriantitle = (TextView) findViewById(R.id.grammerian);
-
-
-
 
         tmofday = (TextView) findViewById(R.id.tmofdayname);
         ttmaster = (TextView) findViewById(R.id.ttmastername);
