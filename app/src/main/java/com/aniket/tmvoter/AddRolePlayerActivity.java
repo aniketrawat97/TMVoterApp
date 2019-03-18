@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class AddRolePlayerActivity extends AppCompatActivity {
 
@@ -41,12 +42,16 @@ public class AddRolePlayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_roleplayer);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar
+
+      /*  requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        Objects.requireNonNull(getSupportActionBar()).hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+*/
+
+
+        setContentView(R.layout.activity_roleplayer);
 
         mydb = new DatabaseHelper(this);
 
@@ -59,6 +64,9 @@ public class AddRolePlayerActivity extends AppCompatActivity {
         ttmastertitle = (TextView) findViewById(R.id.ttmaster);
         genevaluatertitle = (TextView) findViewById(R.id.generalevaluater);
         grammeriantitle = (TextView) findViewById(R.id.grammerian);
+
+
+
 
         tmofday = (TextView) findViewById(R.id.tmofdayname);
         ttmaster = (TextView) findViewById(R.id.ttmastername);
@@ -99,6 +107,7 @@ public class AddRolePlayerActivity extends AppCompatActivity {
 
 
                 mydb.insertdata(item,tmofdaytitle.getText().toString(),"R",0);
+
                 Toast.makeText(getApplicationContext(),"data stored",Toast.LENGTH_SHORT).show();
 
 
@@ -120,6 +129,7 @@ public class AddRolePlayerActivity extends AppCompatActivity {
                 ttmaster.setText(item);
 
                 mydb.insertdata(item,tmofdaytitle.getText().toString(),"R",0);
+
                 Toast.makeText(getApplicationContext(),"data stored",Toast.LENGTH_SHORT).show();
 
 

@@ -1,230 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
 
     <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:background="#FFFFFF">
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:background="#FFFFFF">
 
 
-        <TextView
-            android:id="@+id/roleplayer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/roleplayers"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="33dp"
-            android:textAppearance="@style/roleplayers" />
+            <TextView
+                android:id="@+id/roleplayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roleplayers"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="33dp"
+                android:textAppearance="@style/roleplayers" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativetmofday"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#5FA0B6">
+
+
+            <TextView
+                android:id="@+id/tmofday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toastmaster"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="@style/toastmaster"
+                />
+
+            <Spinner
+                android:id="@+id/plus1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/tmofday"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="69dp"
+                style="@style/CustomSpinnerTheme"
+                />
+
+            <TextView
+                android:id="@+id/tmofdayname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tmofday"
+                android:text="@string/tm_zakiuddi"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/tm_zakiuddi"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/relativetmofday"
+            android:layout_marginLeft="65dp"
+            android:background="#FFFFFF" />
+
+
+        <RelativeLayout
+            android:id="@+id/cardttmaster"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#5FA0B6">
+
+
+            <TextView
+                android:id="@+id/ttmaster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ttmaster"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="@style/ttmaster"
+                />
+
+            <Spinner
+                android:id="@+id/plus2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/ttmaster"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="125dp"
+                style="@style/CustomSpinnerTheme"
+
+                />
+
+
+            <TextView
+                android:id="@+id/ttmastername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ttmaster"
+                android:text="@string/tm_zakiuddi"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/tm_zakiuddi"
+                />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/cardttmaster"
+            android:layout_marginLeft="65dp"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/cardgeneralevaluater"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#5FA0B6">
+
+
+            <TextView
+                android:id="@+id/generalevaluater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generalevaluater"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="@style/ttmaster"
+                />
+
+            <Spinner
+                android:id="@+id/plus3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/generalevaluater"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="125dp"
+                style="@style/CustomSpinnerTheme"
+
+                />
+
+
+            <TextView
+                android:id="@+id/genralevaluaterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/generalevaluater"
+                android:text="@string/tm_zakiuddi"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/tm_zakiuddi"
+                />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/cardttmaster"
+            android:layout_marginLeft="65dp"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/cardgrammerian"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#5FA0B6">
+
+
+            <TextView
+                android:id="@+id/grammerian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grammerian"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="@style/ttmaster"
+                />
+
+            <Spinner
+                android:id="@+id/plus4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/grammerian"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="185dp"
+                style="@style/CustomSpinnerTheme"
+
+                />
+
+
+            <TextView
+                android:id="@+id/grammerianname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grammerian"
+                android:text="@string/tm_zakiuddi"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/tm_zakiuddi"
+                />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
-
-
-    <RelativeLayout
-        android:id="@+id/relativetmofday"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-        <TextView
-            android:id="@+id/tmofday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/toastmaster"
-            android:layout_marginTop="35dp"
-            android:layout_marginStart="30dp"
-            android:textAppearance="@style/toastmaster"
-            />
-
-        <Spinner
-            android:id="@+id/plus1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@id/tmofday"
-            android:layout_marginTop="45dp"
-            android:layout_marginStart="69dp"
-            style="@style/CustomSpinnerTheme"
-            />
-
-        <TextView
-            android:id="@+id/tmofdayname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tmofday"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/line_1"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
-
-    <RelativeLayout
-        android:id="@+id/cardttmaster"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-        <TextView
-            android:id="@+id/ttmaster"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ttmaster"
-            android:layout_marginTop="35dp"
-            android:layout_marginStart="30dp"
-            android:textAppearance="@style/ttmaster"
-            />
-
-        <Spinner
-            android:id="@+id/plus2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@id/ttmaster"
-            android:layout_marginTop="45dp"
-            android:layout_marginStart="125dp"
-            style="@style/CustomSpinnerTheme"
-
-            />
-
-
-        <TextView
-            android:id="@+id/ttmastername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ttmaster"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-
-    <View
-        android:id="@+id/line_2"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
-    <RelativeLayout
-        android:id="@+id/cardgeneralevaluater"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-        <TextView
-            android:id="@+id/generalevaluater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/generalevaluater"
-            android:layout_marginTop="35dp"
-            android:layout_marginStart="30dp"
-            android:textAppearance="@style/ttmaster"
-            />
-
-        <Spinner
-            android:id="@+id/plus3"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@id/generalevaluater"
-            android:layout_marginTop="45dp"
-            android:layout_marginStart="125dp"
-            style="@style/CustomSpinnerTheme"
-
-            />
-
-
-        <TextView
-            android:id="@+id/genralevaluaterName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/generalevaluater"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-
-    <View
-        android:id="@+id/line_3"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
-    <RelativeLayout
-        android:id="@+id/cardgrammerian"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-        <TextView
-            android:id="@+id/grammerian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/grammerian"
-            android:layout_marginTop="35dp"
-            android:layout_marginStart="30dp"
-            android:textAppearance="@style/ttmaster"
-            />
-
-        <Spinner
-            android:id="@+id/plus4"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toEndOf="@id/grammerian"
-            android:layout_marginTop="45dp"
-            android:layout_marginStart="185dp"
-            style="@style/CustomSpinnerTheme"
-
-            />
-
-
-        <TextView
-            android:id="@+id/grammerianname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/grammerian"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+</ScrollView>
