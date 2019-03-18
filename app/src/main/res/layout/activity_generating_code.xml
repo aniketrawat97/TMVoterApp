@@ -31,7 +31,7 @@
         android:layout_below="@+id/enter_passw"
         android:layout_marginBottom="8dp"
         android:background="@drawable/line"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/generating_code_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/enter_passw" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/generating_code_box"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="10dp"
@@ -126,14 +126,58 @@
         android:id="@+id/generate_me"
         android:layout_width="319dp"
         android:layout_height="40dp"
-
         android:text="@string/generate_me"
-        android:textAppearance="@style/generate_me"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        android:textAppearance="@style/generate_code_button"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/generating_code_box"
+        app:layout_constraintEnd_toEndOf="@+id/generating_code_box"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/generating_code_box"
+        app:layout_constraintTop_toBottomOf="@+id/generating_code_box"/>
+
+    <TextView
+        android:id="@+id/gcode1"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:text="0"
+        android:textAppearance="@style/code_number"
+        app:layout_constraintBottom_toBottomOf="@+id/pass1"
+        app:layout_constraintEnd_toEndOf="@+id/pass1"
+        app:layout_constraintStart_toStartOf="@+id/pass1"
+        app:layout_constraintTop_toTopOf="@+id/pass1"/>
+
+    <TextView
+        android:id="@+id/gcode2"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:text="0"
+        android:textAppearance="@style/code_number"
+        app:layout_constraintBottom_toBottomOf="@+id/pass2"
+        app:layout_constraintEnd_toEndOf="@+id/pass2"
+        app:layout_constraintStart_toStartOf="@+id/pass2"
+        app:layout_constraintTop_toTopOf="@+id/pass2"/>
+
+    <TextView
+        android:id="@+id/gcode3"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:text="0"
+        android:textAppearance="@style/code_number"
+        app:layout_constraintBottom_toBottomOf="@+id/pass3"
+        app:layout_constraintEnd_toEndOf="@+id/pass3"
+        app:layout_constraintStart_toStartOf="@+id/pass3"
+        app:layout_constraintTop_toTopOf="@+id/pass3"/>
+
+    <TextView
+        android:id="@+id/gcode4"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:text="0"
+        android:textAppearance="@style/code_number"
+        app:layout_constraintBottom_toBottomOf="@+id/pass4"
+        app:layout_constraintEnd_toEndOf="@+id/pass4"
+        app:layout_constraintStart_toStartOf="@+id/pass4"
+        app:layout_constraintTop_toTopOf="@+id/pass4"/>
 
 </android.support.constraint.ConstraintLayout>
 
