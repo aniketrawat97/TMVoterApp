@@ -3,11 +3,11 @@ package com.aniket.tmvoter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class bestevaluater extends AppCompatActivity {
+public class AuxilaryRoleplayerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluater);
+        setContentView(R.layout.activity_best_auxilaryroleplayer);
     }
 }

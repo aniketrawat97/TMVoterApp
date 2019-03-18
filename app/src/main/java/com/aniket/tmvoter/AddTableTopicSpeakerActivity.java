@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-public class tableTopicSpeaker extends AppCompatActivity {
+public class AddTableTopicSpeakerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

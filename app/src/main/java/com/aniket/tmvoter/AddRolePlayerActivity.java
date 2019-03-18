@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class rolePlayer extends AppCompatActivity {
+public class AddRolePlayerActivity extends AppCompatActivity {
 
     DatabaseHelper mydb;
 

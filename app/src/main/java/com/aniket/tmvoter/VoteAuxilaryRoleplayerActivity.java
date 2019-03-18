@@ -3,7 +3,7 @@ package com.aniket.tmvoter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class bestAuxilaryroleplayer extends AppCompatActivity {
+public class VoteAuxilaryRoleplayerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

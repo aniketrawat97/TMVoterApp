@@ -1,24 +1,12 @@
 package com.aniket.tmvoter;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
-import java.lang.ref.Reference;
 
 public class UseAsActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
@@ -34,7 +22,7 @@ public class UseAsActivity extends AppCompatActivity {
         voterbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toMeetingcodecheck = new Intent(getApplicationContext(), MeetingCode.class);
+                Intent toMeetingcodecheck = new Intent(getApplicationContext(), MeetingCodeActivity.class);
                 startActivity(toMeetingcodecheck);
             }
         });
@@ -42,7 +30,7 @@ public class UseAsActivity extends AppCompatActivity {
         adminbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent togeneratecode = new Intent(getApplicationContext(),generatingCodeActivity.class);
+                Intent togeneratecode = new Intent(getApplicationContext(), GeneratingCodeActivity.class);
                 startActivity(togeneratecode);
             }
         });

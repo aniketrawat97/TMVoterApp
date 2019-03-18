@@ -3,7 +3,6 @@
     <string name="use_as">USE AS</string>
     <string name="logo">LOGO</string>
     <string name="here">HERE</string>
-
     <string name="voter">VOTER</string>
     <string name="admin">ADMIN</string>
     <string name="prepared_sp">Prepared Speakers</string>
@@ -44,9 +43,4 @@
     <string name="three">Third</string>
     <string name="generalevaluater">General Evaluater</string>
     <string name="grammerian">Grammerian</string>
-
-
-    <string name="three">Third</string>
-
-
 </resources>

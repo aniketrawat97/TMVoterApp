@@ -15,7 +15,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Random;
 
-public class generatingCodeActivity extends AppCompatActivity {
+public class GeneratingCodeActivity extends AppCompatActivity {
     ImageView generatebox;
     TextView c1, c2, c3, c4;
     DatabaseReference fdb;
