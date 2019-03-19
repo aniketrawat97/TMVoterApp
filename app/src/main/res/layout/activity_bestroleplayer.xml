@@ -31,7 +31,7 @@
 
 
     <TextView
-        android:id="@+id/tmofday"
+        android:id="@+id/role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/toastmaster"
@@ -41,10 +41,10 @@
         />
 
         <TextView
-            android:id="@+id/tmofdayname"
+            android:id="@+id/person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tmofday"
+            android:layout_below="@id/role"
             android:text="@string/tm_zakiuddi"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"

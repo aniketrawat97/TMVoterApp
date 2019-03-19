@@ -2,21 +2,15 @@ package com.aniket.tmvoter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class AddRolePlayerActivity extends AppCompatActivity {
 
@@ -43,32 +37,28 @@ public class AddRolePlayerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
       /*  requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         Objects.requireNonNull(getSupportActionBar()).hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 */
 
-
         setContentView(R.layout.activity_roleplayer);
 
         mydb = new DatabaseHelper(this);
 
-        plus1 = (Spinner) findViewById(R.id.plus1);
+        plus1 = (Spinner) findViewById(R.id.plus);
         plus2 = (Spinner) findViewById(R.id.plus2);
         plus3 = (Spinner) findViewById(R.id.plus3);
         plus4 = (Spinner) findViewById(R.id.plus4);
 
-        tmofdaytitle = (TextView) findViewById(R.id.tmofday);
+        tmofdaytitle = (TextView) findViewById(R.id.role);
         ttmastertitle = (TextView) findViewById(R.id.ttmaster);
         genevaluatertitle = (TextView) findViewById(R.id.generalevaluater);
         grammeriantitle = (TextView) findViewById(R.id.grammerian);
 
 
-
-
-        tmofday = (TextView) findViewById(R.id.tmofdayname);
+        tmofday = (TextView) findViewById(R.id.person);
         ttmaster = (TextView) findViewById(R.id.ttmastername);
         genevaluater = (TextView) findViewById(R.id.genralevaluaterName);
         grammerian = (TextView) findViewById(R.id.grammerianname);
@@ -96,7 +86,6 @@ public class AddRolePlayerActivity extends AppCompatActivity {
         plus4.setAdapter(dataAdapter);
 
 
-
         //spinner1
         plus1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -105,20 +94,14 @@ public class AddRolePlayerActivity extends AppCompatActivity {
                 // Notify the selected item text
                 tmofday.setText(item);
 
-
                 mydb.insertdata(item,tmofdaytitle.getText().toString(),"R",0);
 
                 Toast.makeText(getApplicationContext(),"data stored",Toast.LENGTH_SHORT).show();
-
-
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
-
 
         //spinner2
         plus2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -153,7 +136,6 @@ public class AddRolePlayerActivity extends AppCompatActivity {
                 mydb.insertdata(item,genevaluatertitle.getText().toString(),"A",0);
                 Toast.makeText(getApplicationContext(),"data stored",Toast.LENGTH_SHORT).show();
 
-
             }
 
             @Override
@@ -173,8 +155,6 @@ public class AddRolePlayerActivity extends AppCompatActivity {
 
                 mydb.insertdata(item,grammeriantitle.getText().toString(),"R",0);
                 Toast.makeText(getApplicationContext(),"data stored",Toast.LENGTH_SHORT).show();
-
-
             }
 
             @Override

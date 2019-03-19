@@ -1,5 +1,6 @@
 package com.aniket.tmvoter;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,11 +73,15 @@ public class MeetingCodeActivity extends AppCompatActivity {
                     Log.i("codes", "nondb-"+code);
                     if(code.equals(db_code)){
                         Log.i("codes", "Correct");
+                        tryAgain.setVisibility(View.VISIBLE);
+                        tryAgain.setText("Correct Code");
+                        tryAgain.setTextColor(Color.GREEN);
 
                     }
                     else{
                         Log.i("codes", "Wrong");
                         tryAgain.setVisibility(View.VISIBLE);
+                        tryAgain.setTextColor(Color.parseColor("#EC7373"));
                     }
                     return;
                 }

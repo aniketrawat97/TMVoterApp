@@ -38,7 +38,7 @@
 
 
             <TextView
-                android:id="@+id/tmofday"
+                android:id="@+id/role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toastmaster"
@@ -48,20 +48,20 @@
                 />
 
             <Spinner
-                android:id="@+id/plus1"
+                android:id="@+id/plus"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_toRightOf="@id/tmofday"
+                android:layout_toRightOf="@id/role"
                 android:layout_marginTop="45dp"
                 android:layout_marginLeft="69dp"
                 style="@style/CustomSpinnerTheme"
                 />
 
             <TextView
-                android:id="@+id/tmofdayname"
+                android:id="@+id/person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tmofday"
+                android:layout_below="@id/role"
                 android:text="@string/tm_zakiuddi"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
