@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRoleDynamic">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/asdf">
+
+        <TextView
+            android:id="@+id/roleplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/roleplayers"
+            android:textAppearance="@style/roleplayers" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/asdf"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_alignTop="@+id/relativeLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:divider="@drawable/line"
+        android:dividerHeight="2.5dp"></ListView>
+
+</LinearLayout>

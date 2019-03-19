@@ -1,5 +1,6 @@
 package com.aniket.tmvoter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,28 +20,37 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MeetingCodeActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+public class PasswordActivity extends AppCompatActivity {
     EditText c[];
     int it;
     String code,db_code;
     DatabaseReference fdb;
     TextView tryAgain;
+    static List membersList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         fdb= FirebaseDatabase.getInstance().getReference();
         super.onCreate(savedInstanceState);
         it=0;
         code="";
-        setContentView(R.layout.activity_meeting_code);
+        membersList=new ArrayList();
+        setContentView(R.layout.activity_password);
         c = new EditText[4];
-        c[0]=findViewById(R.id.code1);
-        c[1]=findViewById(R.id.code2);
-        c[2]=findViewById(R.id.code3);
-        c[3]=findViewById(R.id.code4);
+        c[0]=findViewById(R.id.pcode1);
+        c[1]=findViewById(R.id.pcode2);
+        c[2]=findViewById(R.id.pcode3);
+        c[3]=findViewById(R.id.pcode4);
         tryAgain=findViewById(R.id.try_again);
         c[0].requestFocus();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-        fdb.child("Meeting").child("meeting2").child("meeting_code").addListenerForSingleValueEvent(new ValueEventListener() {
+        fdb.child("Password").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 db_code=dataSnapshot.getValue(String.class);
@@ -73,15 +83,15 @@ public class MeetingCodeActivity extends AppCompatActivity {
                     Log.i("codes", "nondb-"+code);
                     if(code.equals(db_code)){
                         Log.i("codes", "Correct");
-                        tryAgain.setVisibility(View.VISIBLE);
-                        tryAgain.setText("Correct Code");
+                        Toast.makeText(PasswordActivity.this, "Welcome Admin", Toast.LENGTH_LONG).show();
                         tryAgain.setTextColor(Color.GREEN);
+                        toNextActivity();
 
                     }
                     else{
                         Log.i("codes", "Wrong");
                         tryAgain.setVisibility(View.VISIBLE);
-                        tryAgain.setTextColor(Color.parseColor("#EC7373"));
+                        tryAgain.setTextColor(Color.WHITE);
                     }
                     return;
                 }
@@ -92,5 +102,26 @@ public class MeetingCodeActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void toNextActivity(){
+        fdb.child("Members").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Map<String,String> membermap=(HashMap<String,String>) dataSnapshot.getValue();
+                membersList =new ArrayList<>(membermap.values());
+                Collections.sort(membersList);
+                Intent intent=new Intent(getApplicationContext(),AddRoleDynamic.class);
+                startActivity(intent);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+    public static List getMembersList() {
+        return membersList;
     }
 }
