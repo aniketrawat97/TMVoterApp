@@ -1,5 +1,6 @@
 package com.aniket.tmvoter;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,11 +38,10 @@ public class AddRoleDynamic extends AppCompatActivity {
         roleCardList.add(new RoleCard("Heyy ","TM Prerna"));
         roleCardList.add(new RoleCard("Grammarian ","TM Zakkiuddin Gorakhpurwala"));
 
+
         ref = FirebaseDatabase.getInstance().getReference().child("Members");
         membersList = new ArrayList();
         customAdapter=new CustomAdapter(AddRoleDynamic.this,roleCardList);
         listView.setAdapter(customAdapter);
-
     }
-
 }

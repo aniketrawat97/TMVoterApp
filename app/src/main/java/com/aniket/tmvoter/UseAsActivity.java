@@ -1,6 +1,7 @@
 package com.aniket.tmvoter;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class UseAsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_use_as_activity);
 //        getWindow().setNavigationBarColor(Color.parseColor("#FF5FA0B6"));
-//        getWindow().setStatusBarColor(Color.parseColor("#FF5FA0B6"));
+        getWindow().setStatusBarColor(Color.parseColor("#FF5FA0B6"));
         voterbox = findViewById(R.id.voterbox);
         voterbox.setOnClickListener(new View.OnClickListener() {
             @Override

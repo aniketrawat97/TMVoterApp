@@ -93,7 +93,7 @@
                 android:text="@string/ttmaster"
                 android:layout_marginTop="35dp"
                 android:layout_marginLeft="30dp"
-                android:textAppearance="@style/ttmaster"
+                android:textAppearance="@style/toastmaster"
                 />
 
             <Spinner
@@ -144,7 +144,7 @@
                 android:text="@string/generalevaluater"
                 android:layout_marginTop="35dp"
                 android:layout_marginLeft="30dp"
-                android:textAppearance="@style/ttmaster"
+                android:textAppearance="@style/toastmaster"
                 />
 
             <Spinner
@@ -195,7 +195,7 @@
                 android:text="@string/grammerian"
                 android:layout_marginTop="35dp"
                 android:layout_marginLeft="30dp"
-                android:textAppearance="@style/ttmaster"
+                android:textAppearance="@style/toastmaster"
                 />
 
             <Spinner

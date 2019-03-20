@@ -86,7 +86,6 @@ public class PasswordActivity extends AppCompatActivity {
                         Toast.makeText(PasswordActivity.this, "Welcome Admin", Toast.LENGTH_LONG).show();
                         tryAgain.setTextColor(Color.GREEN);
                         toNextActivity();
-
                     }
                     else{
                         Log.i("codes", "Wrong");
@@ -97,11 +96,8 @@ public class PasswordActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void afterTextChanged(Editable s) {
-
-            }
+            public void afterTextChanged(Editable s) {}
         });
-
     }
     public void toNextActivity(){
         fdb.child("Members").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -114,13 +110,9 @@ public class PasswordActivity extends AppCompatActivity {
                 startActivity(intent);
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) {}
         });
-
     }
-
     public static List getMembersList() {
         return membersList;
     }
