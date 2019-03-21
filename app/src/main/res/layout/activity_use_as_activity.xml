@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"/>
 
 
     <TextView
@@ -35,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cicle" />
+        app:layout_constraintTop_toBottomOf="@+id/cicle"
+        android:elevation="7dp"/>
 
     <View
         android:id="@+id/line_1"
@@ -47,8 +48,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/use_as" />
+        app:layout_constraintTop_toBottomOf="@+id/use_as"
+        />
 
+    <TextView
+        android:id="@+id/votername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voter"
+        android:textAppearance="@style/voter"
+        app:layout_constraintBottom_toTopOf="@+id/voterbox"
+        app:layout_constraintEnd_toStartOf="@+id/voterbox"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toEndOf="@+id/voterbox"
+        app:layout_constraintTop_toBottomOf="@+id/voterbox"
+        app:layout_constraintVertical_bias="0.504"
+        android:elevation="11dp"/>
 
     <ImageView
         android:id="@+id/voterbox"
@@ -63,20 +78,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line_1"/>
+        app:layout_constraintTop_toBottomOf="@+id/line_1"
+        android:elevation="5dp"/>
 
-    <TextView
-        android:id="@+id/votername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/voter"
-        android:textAppearance="@style/voter"
-        app:layout_constraintBottom_toTopOf="@+id/voterbox"
-        app:layout_constraintEnd_toStartOf="@+id/voterbox"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toEndOf="@+id/voterbox"
-        app:layout_constraintTop_toBottomOf="@+id/voterbox"
-        app:layout_constraintVertical_bias="0.504" />
 
 
     <ImageView
@@ -92,7 +96,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voterbox" />
+        app:layout_constraintTop_toBottomOf="@+id/voterbox"
+        android:elevation="5dp"/>
 
     <TextView
         android:id="@+id/admin"
@@ -107,7 +112,8 @@
         app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toEndOf="@+id/adminbox"
         app:layout_constraintTop_toBottomOf="@+id/adminbox"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintVertical_bias="0.487"
+        android:elevation="10dp"/>
 
 
     <View
@@ -119,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminbox" />
+        app:layout_constraintTop_toBottomOf="@+id/adminbox"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -129,7 +135,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/voterbox"
         app:layout_constraintStart_toEndOf="@+id/votername"
         app:layout_constraintTop_toTopOf="@+id/voterbox"
-        app:srcCompat="@drawable/hand" />
+        app:srcCompat="@drawable/hand"
+        android:elevation="15dp"/>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -139,7 +146,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/adminbox"
         app:layout_constraintStart_toEndOf="@+id/admin"
         app:layout_constraintTop_toTopOf="@+id/adminbox"
-        app:srcCompat="@drawable/smallgear_blue" />
+        app:srcCompat="@drawable/smallgear_blue"
+        android:elevation="15dp"/>
 
     <TextView
         android:id="@+id/logo_here"
@@ -147,9 +155,8 @@
         android:layout_height="72dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/logo_here"
+        android:textAlignment="center"
         android:textAppearance="@style/logo_here"
         app:layout_constraintBottom_toBottomOf="@+id/cicle"
         app:layout_constraintEnd_toEndOf="@+id/cicle"

@@ -50,24 +50,13 @@ public class PasswordActivity extends AppCompatActivity {
         tryAgain=findViewById(R.id.try_again);
         c[0].requestFocus();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
-        fdb.child("Password").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                db_code=dataSnapshot.getValue(String.class);
-                Log.i("codes", "db-"+db_code);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        db_code=FirebaseUtils.getPassword();
+        Log.i("timing", "Password value assigned "+db_code);
         onTextChange(c[it]);
-
     }
 
     public void onTextChange(EditText et){
-
+        Log.i("timing", "onTextChange: ");
         et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -80,40 +69,28 @@ public class PasswordActivity extends AppCompatActivity {
                     c[it].requestFocus();
                     onTextChange(c[it]);
                 }else{
-                    Log.i("codes", "nondb-"+code);
+                    Log.i("codes", "nondb- "+code);
+                    Log.i("codes", "db- "+db_code);
+                    if(db_code.equals("")){
+                        Log.i("codes", "empty");
+                    }
                     if(code.equals(db_code)){
                         Log.i("codes", "Correct");
-                        Toast.makeText(PasswordActivity.this, "Welcome Admin", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(PasswordActivity.this,AddRoleDynamic.class));
+                        Toast.makeText(PasswordActivity.this, "Welcome Administrator", Toast.LENGTH_LONG).show();
                         tryAgain.setTextColor(Color.GREEN);
-                        toNextActivity();
                     }
                     else{
                         Log.i("codes", "Wrong");
                         tryAgain.setVisibility(View.VISIBLE);
                         tryAgain.setTextColor(Color.WHITE);
                     }
-                    return;
                 }
             }
             @Override
             public void afterTextChanged(Editable s) {}
         });
     }
-    public void toNextActivity(){
-        fdb.child("Members").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Map<String,String> membermap=(HashMap<String,String>) dataSnapshot.getValue();
-                membersList =new ArrayList<>(membermap.values());
-                Collections.sort(membersList);
-                Intent intent=new Intent(getApplicationContext(),AddRoleDynamic.class);
-                startActivity(intent);
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {}
-        });
-    }
-    public static List getMembersList() {
-        return membersList;
-    }
+
+
 }

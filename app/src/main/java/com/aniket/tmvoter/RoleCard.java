@@ -30,11 +30,5 @@ public class RoleCard {
     public void setPersonName(String personName) {
         this.personName = personName;
     }
-    public void updateVotes(int v){
-        votes+=v;
-        DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
-        ref.child("vote").child("role").setValue(roleName);
-        ref.child("vote").child("name").setValue(personName);
-        ref.child("vote").child("votes").setValue(votes);
-    }
+
 }

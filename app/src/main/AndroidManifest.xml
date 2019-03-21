@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddRoleDynamic"></activity>
+        <activity android:name=".AddTableTopicSpeakerActivity"></activity>
+        <activity android:name=".UseAsActivity"></activity>
+        <activity android:name=".AddAuxilaryRoleplayerActivity" />
+        <activity android:name=".AddRoleDynamic" />
         <activity android:name=".PasswordActivity" />
-        <activity android:name=".AddRolePlayerActivity" />
         <activity android:name=".MeetingCodeActivity" />
         <activity android:name=".GuestActivity" />
         <activity android:name=".GeneratingCodeActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".UseAsActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

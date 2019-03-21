@@ -23,7 +23,6 @@ public class AddRoleDynamic extends AppCompatActivity {
     ListView listView;
     List<RoleCard> roleCardList;
     static List<String >membersList;
-    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +32,14 @@ public class AddRoleDynamic extends AppCompatActivity {
         membersList=new ArrayList<>();
 
         roleCardList=new ArrayList<>();
-        roleCardList.add(new RoleCard("Toastmaster of the day","TM Aniket Rawat"));
-        roleCardList.add(new RoleCard("TableTopic Master","TM Saloni Gupta"));
-        roleCardList.add(new RoleCard("Heyy ","TM Prerna"));
-        roleCardList.add(new RoleCard("Grammarian ","TM Zakkiuddin Gorakhpurwala"));
+        roleCardList.add(new RoleCard("Toastmaster Of The Day",""));
+        roleCardList.add(new RoleCard("TableTopic Master",""));
+        roleCardList.add(new RoleCard("General Evaluator",""));
+        roleCardList.add(new RoleCard("Grammarian",""));
 
-
-        ref = FirebaseDatabase.getInstance().getReference().child("Members");
         membersList = new ArrayList();
-        customAdapter=new CustomAdapter(AddRoleDynamic.this,roleCardList);
+        Intent i=new Intent(getApplicationContext(),AddAuxilaryRoleplayerActivity.class);
+        customAdapter=new CustomAdapter(AddRoleDynamic.this,roleCardList,FirebaseUtils.getMembersList(),i);
         listView.setAdapter(customAdapter);
     }
 }

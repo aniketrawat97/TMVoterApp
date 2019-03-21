@@ -17,7 +17,7 @@ public class GuestActivity extends AppCompatActivity {
 EditText guestName;
 TextView addBox;
 ListView guestList;
-ArrayList<String> guests;
+static ArrayList<String> guests;
 FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ FloatingActionButton fab;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent=new Intent(getApplicationContext(),GeneratingCodeActivity.class);
+            Intent intent=new Intent(getApplicationContext(),AddTableTopicSpeakerActivity.class);
             startActivity(intent);
             }
         });
