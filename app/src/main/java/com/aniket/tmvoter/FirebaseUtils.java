@@ -36,7 +36,8 @@ public class FirebaseUtils {
     }
 
     //downloading data
-    public static void downloaddataSnapshot(){
+
+    public static void downloaddataSnapshot(){     //downloading dataSnapshot to save network usage in frequent access
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -111,7 +112,7 @@ public class FirebaseUtils {
 
         prepareVotes();
 
-    }  // downloads dataSnapshot and calls all the prepare methods
+    }  // Calls all the prepare methods
 
 
     //Getters

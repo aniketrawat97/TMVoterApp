@@ -17,16 +17,19 @@ ArrayList<String> speakable;
     ListView listView;
     List<RoleCard> roleCardList;
     static List<String >membersList;
-    FloatingActionButton fab;
+    FloatingActionButton fab,fabNext;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table_topic_speaker);
+        intent=new Intent(AddTableTopicSpeakerActivity.this,GeneratingCodeActivity.class);
 
         speakable=new ArrayList<>(FirebaseUtils.getMembersList());
         listView=findViewById(R.id.listtts);
         fab=findViewById(R.id.myFABTT);
+        fabNext=findViewById(R.id.myFABTTnext);
         roleCardList=new ArrayList<>();
 
         speakable.addAll(GuestActivity.guests);
@@ -35,9 +38,14 @@ ArrayList<String> speakable;
             @Override
             public void onClick(View v) {
                 roleCardList.add(new RoleCard("TableTopic Speaker "+Integer.toString(roleCardList.size()+1),""));
-                Intent i=new Intent(AddTableTopicSpeakerActivity.this,GeneratingCodeActivity.class);
-                customAdapter=new CustomAdapter(AddTableTopicSpeakerActivity.this,roleCardList,speakable,i);
+                customAdapter=new CustomAdapter(AddTableTopicSpeakerActivity.this,roleCardList,speakable,intent,1000);
                 listView.setAdapter(customAdapter);
+            }
+        });
+        fabNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
             }
         });
 

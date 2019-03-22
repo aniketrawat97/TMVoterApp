@@ -14,13 +14,20 @@ import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
     public Context context;
-    public List<RoleCard> RoleList;
+    public List<RoleCard> roleList;
     public List<String> membersList;
     int itemCount;
     public Intent intent;
+    public CustomAdapter(Context context, List<RoleCard> roleList,List<String>membersList,Intent intent,int itemCount) {
+        this.context = context;
+        this.roleList = roleList;
+        this.itemCount=itemCount;
+        this.intent=intent;
+        this.membersList=membersList;
+    }
     public CustomAdapter(Context context, List<RoleCard> roleList,List<String>membersList,Intent intent) {
         this.context = context;
-        RoleList = roleList;
+        this.roleList = roleList;
         this.itemCount=roleList.size();
         this.intent=intent;
         this.membersList=membersList;
@@ -28,12 +35,12 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return RoleList.size();
+        return roleList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return RoleList.get(position);
+        return roleList.get(position);
     }
 
     @Override
@@ -50,9 +57,15 @@ public class CustomAdapter extends BaseAdapter {
 
         //setting up text to textviews
 
-        role.setText(RoleList.get(position).getRoleName());
+        final int posRoleList=position;
 
-        person.setText(RoleList.get(position).getPersonName());
+        role.setText(roleList.get(posRoleList).getRoleName());
+
+        person.setText(roleList.get(posRoleList).getPersonName());
+
+        if(roleList.get(posRoleList).getFilled()){
+            plus.setVisibility(View.INVISIBLE);
+        }
 
         //setting up Spinner and its Adapter
 
@@ -70,10 +83,19 @@ public class CustomAdapter extends BaseAdapter {
         plus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                RoleCard temp=roleList.get(posRoleList);
+
+
+
                 Toast.makeText(context, "Selected", Toast.LENGTH_SHORT).show();
-                person.setText( "TM "+FirebaseUtils.getMembersList().get(position).toString());
-                FirebaseUtils.updateCandidateName(person.getText().toString(),role.getText().toString(),0);
+                String nameSelected="TM "+membersList.get(position);
+                person.setText(nameSelected);
                 plus.setVisibility(View.INVISIBLE);
+                temp.setPersonName(nameSelected); // saving the name back in the rolelist
+                temp.setFilled(true);
+
+                FirebaseUtils.updateCandidateName(person.getText().toString(),role.getText().toString(),0);
+
                 itemCount--;
 
                 if(itemCount<1){  // To jump on next activity on completion

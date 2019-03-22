@@ -8,11 +8,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RoleCard {
     String roleName,personName;
     int votes;
+    boolean filled;
 
     public RoleCard(String roleName, String personName) {
         this.roleName = roleName;
         this.personName = personName;
         this.votes=0;
+        filled=false;
     }
 
     public String getRoleName() {
@@ -29,6 +31,17 @@ public class RoleCard {
 
     public void setPersonName(String personName) {
         this.personName = personName;
+    }
+
+    public boolean isFilled() {
+        return filled;
+    }
+
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+    public boolean getFilled() {
+        return filled;
     }
 
 }
