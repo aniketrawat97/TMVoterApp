@@ -1,3 +1,40 @@
+/*package com.aniket.tmvoter;
+
+import android.content.Intent;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class SplashActivity extends AppCompatActivity {
+    Runnable firePrep;
+    Handler handler;
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+        FirebaseUtils.prepareDatabase();
+        handler=new Handler();
+        firePrep=new Runnable() {
+            @Override
+            public void run() {
+                Intent i=new Intent(getApplicationContext(),UseAsActivity.class);
+                startActivity(i);
+                finish();
+            }
+        };
+        handler.postDelayed(firePrep,3000);
+
+    }
+}*/
+
+
 package com.aniket.tmvoter;
 
 import android.app.Instrumentation;
@@ -16,8 +53,6 @@ public class SplashActivity extends AppCompatActivity {
     Runnable firePrep;
     Handler handler;
     TextView noInternet;
-
-
 
     public static boolean isNetworkAvailable(Context con) {
         try {
@@ -44,9 +79,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        noInternet = findViewById(R.id.nointernet);
+        //noInternet = findViewById(R.id.nointernet);
         FirebaseUtils.prepareDatabase();
-        noInternet.setVisibility(View.INVISIBLE);
+       // noInternet.setVisibility(View.INVISIBLE);
         handler = new Handler();
 
         if (isNetworkAvailable(this)) {

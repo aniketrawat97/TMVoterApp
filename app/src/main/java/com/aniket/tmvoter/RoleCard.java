@@ -10,11 +10,17 @@ public class RoleCard {
     int votes;
     boolean filled;
 
+    public RoleCard(String roleName, String personName,Boolean filled) {
+        this.roleName = roleName;
+        this.personName = personName;
+        this.votes=0;
+        this.filled=filled;
+    }
     public RoleCard(String roleName, String personName) {
         this.roleName = roleName;
         this.personName = personName;
         this.votes=0;
-        filled=false;
+        this.filled=false;
     }
 
     public String getRoleName() {

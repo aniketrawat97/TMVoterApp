@@ -1,5 +1,6 @@
 package com.aniket.tmvoter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,6 @@ public class MeetingCodeActivity extends AppCompatActivity {
                 db_code=dataSnapshot.getValue(String.class);
                 Log.i("codes", "db-"+db_code);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -76,7 +76,7 @@ public class MeetingCodeActivity extends AppCompatActivity {
                         tryAgain.setVisibility(View.VISIBLE);
                         tryAgain.setText("Correct Code");
                         tryAgain.setTextColor(Color.GREEN);
-
+                        startActivity(new Intent(getApplicationContext(),VoteRoleplayerActivity.class));
                     }
                     else{
                         Log.i("codes", "Wrong");

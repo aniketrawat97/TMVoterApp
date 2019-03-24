@@ -1,13 +1,47 @@
 package com.aniket.tmvoter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class VoteAuxilaryRoleplayerActivity extends AppCompatActivity {
+    CustomAdapter customAdapter;
+    ListView listView;
+    List<RoleCard> roleCardList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_best_auxilaryroleplayer);
+        listView=findViewById(R.id.list_vote_arp);
+
+        roleCardList=new ArrayList<>();
+        roleCardList.add(new RoleCard("Timer",FirebaseUtils.getRolePlayer("Timer"),true));
+        roleCardList.add(new RoleCard("Ah Counter",FirebaseUtils.getRolePlayer("Ah Counter"),true));
+        roleCardList.add(new RoleCard("Hark Master",FirebaseUtils.getRolePlayer("Hark Master"),true));
+
+        Intent i=new Intent(getApplicationContext(),GuestActivity.class);
+        customAdapter=new CustomAdapter(VoteAuxilaryRoleplayerActivity.this,roleCardList,FirebaseUtils.getMembersList(),i);
+        listView.setAdapter(customAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView roleTemp=view.findViewById(R.id.role);
+                Log.i("votes", roleTemp.getText().toString());
+                String rolename=roleTemp.getText().toString();
+                FirebaseUtils.incrementVotes(rolename);
+                startActivity(new Intent(getApplicationContext(),GuestActivity.class));
+            }
+        });
+
     }
 }

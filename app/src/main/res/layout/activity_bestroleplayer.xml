@@ -1,175 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRoleDynamic">
 
-    <LinearLayout
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:background="#FFFFFF">
-
+        android:layout_height="100dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/asdf">
 
         <TextView
-            android:id="@+id/bestroleplayer"
+            android:id="@+id/roleplayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bestroleplayer"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="33dp"
-            android:textAppearance="@style/roleplayers" />
-
-    </LinearLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/relativetmofday"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-    <TextView
-        android:id="@+id/role"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/toastmaster"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="30dp"
-        android:textAppearance="@style/toastmaster"
-        />
-
-        <TextView
-            android:id="@+id/person"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/role"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Best Roleplayer"
+            android:textAppearance="@style/roleplayers"
+            android:textSize="25dp"/>
     </RelativeLayout>
 
-    <View
-        android:id="@+id/line_1"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_below="@id/relativetmofday"
-        android:layout_marginLeft="65dp"
-        android:background="#FFFFFF" />
-
-
-    <RelativeLayout
-        android:id="@+id/cardttmaster"
+    <ListView
+        android:id="@+id/listvoterp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-    <TextView
-        android:id="@+id/ttmaster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ttmaster"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="30dp"
-        android:textAppearance="@style/ttmaster"
-        />
-
-        <TextView
-            android:id="@+id/ttmastername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ttmaster"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-
-    <View
-        android:id="@+id/line_2"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_below="@id/cardttmaster"
-        android:layout_marginLeft="65dp"
-        android:background="#FFFFFF" />
-
-
-    <RelativeLayout
-        android:id="@+id/cardgeneralevaluater"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-    <TextView
-        android:id="@+id/generalevaluater"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ttmaster"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="30dp"
-        android:textAppearance="@style/ttmaster"
-        />
-
-        <TextView
-            android:id="@+id/genralevaluaterName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/generalevaluater"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
-
-    <View
-        android:id="@+id/line_3"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_below="@id/cardttmaster"
-        android:layout_marginLeft="65dp"
-        android:background="#FFFFFF" />
-
-    <RelativeLayout
-        android:id="@+id/cardgrammerian"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#5FA0B6">
-
-
-    <TextView
-        android:id="@+id/grammerian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ttmaster"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="30dp"
-        android:textAppearance="@style/ttmaster"
-        />
-
-        <TextView
-            android:id="@+id/grammerianname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/grammerian"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
-
-    </RelativeLayout>
-
+        android:layout_height="580dp"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:divider="@drawable/line"
+        android:dividerHeight="2.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"></ListView>
 
 </LinearLayout>

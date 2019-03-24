@@ -20,6 +20,8 @@
         <activity android:name=".GuestActivity" />
         <activity android:name=".GeneratingCodeActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".VoteRoleplayerActivity"/>
+        <activity android:name=".VoteAuxilaryRoleplayerActivity"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

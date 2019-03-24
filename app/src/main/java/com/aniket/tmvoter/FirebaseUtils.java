@@ -95,7 +95,7 @@ public class FirebaseUtils {
 
     public static void prepareVotes(){
         Map<String,ArrayList<String>> votermaps = (HashMap<String,ArrayList<String>>) snapshot.child("Meeting").child("meeting2").child("vote").getValue();
-        for(DataSnapshot myChild: snapshot.child("Meeting").child("meeting2").child("vote").getChildren()){
+        for(DataSnapshot myChild : snapshot.child("Meeting").child("meeting2").child("vote").getChildren()){
             roleList.add(myChild.getKey());                 //get key  of the object that is added to the roleList
             nameList.add(myChild.child("name").getValue(String.class));   //go to name child and get value
             votesList.add(myChild.child("votes").getValue(Long.class).toString());        //go to vote child and get value
@@ -140,4 +140,30 @@ public class FirebaseUtils {
         return votesList.get(i);
     }
 
+    public static String rolePlayerType(String role,String name){
+
+        if(role.equals("Timer")||role.equals("Ah Counter")||role.equals("Hark Master")){
+            return "ARP";
+        }
+        if(role.equals("Toastmaster Of The Day")||role.equals("TableTopic Master")||role.equals("Grammarian")||role.equals("General Evaluator")){
+            return "RP";
+        }
+        if(role.subSequence(0,10).equals("TableTopic")){
+            return "TT";
+        }
+        if(role.subSequence(0,10).equals("TableTopic")){
+            return "TT";
+        }
+        return "NONE";
+    }
+
+    public static String getRolePlayer(String role){
+        return nameList.get(roleList.indexOf(role));
+    }
+    public static void incrementVotes(String role){
+        int index=FirebaseUtils.roleList.indexOf(role);
+        int votes=Integer.parseInt( votesList.get(index) )+1;
+        votesList.set( index,Integer.toString(votes));
+        Log.i("votes", "Votes - "+FirebaseUtils.votesList.get(index));
+    }
 }

@@ -18,6 +18,7 @@ public class CustomAdapter extends BaseAdapter {
     public List<String> membersList;
     int itemCount;
     public Intent intent;
+    public boolean filled;
     public CustomAdapter(Context context, List<RoleCard> roleList,List<String>membersList,Intent intent,int itemCount) {
         this.context = context;
         this.roleList = roleList;
@@ -31,6 +32,14 @@ public class CustomAdapter extends BaseAdapter {
         this.itemCount=roleList.size();
         this.intent=intent;
         this.membersList=membersList;
+    }
+    public CustomAdapter(Context context, List<RoleCard> roleList,List<String>membersList,Intent intent,boolean filled) {
+        this.context = context;
+        this.roleList = roleList;
+        this.itemCount=roleList.size();
+        this.intent=intent;
+        this.membersList=membersList;
+        this.filled=filled;
     }
 
     @Override
@@ -58,7 +67,6 @@ public class CustomAdapter extends BaseAdapter {
         //setting up text to textviews
 
         final int posRoleList=position;
-
         role.setText(roleList.get(posRoleList).getRoleName());
 
         person.setText(roleList.get(posRoleList).getPersonName());
@@ -84,8 +92,6 @@ public class CustomAdapter extends BaseAdapter {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 RoleCard temp=roleList.get(posRoleList);
-
-
 
                 Toast.makeText(context, "Selected", Toast.LENGTH_SHORT).show();
                 String nameSelected="TM "+membersList.get(position);
