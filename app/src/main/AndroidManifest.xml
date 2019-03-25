@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddPreparedSpeaker"></activity>
         <activity android:name=".AddTableTopicSpeakerActivity" />
         <activity android:name=".UseAsActivity" />
         <activity android:name=".AddAuxilaryRoleplayerActivity" />
@@ -20,8 +21,8 @@
         <activity android:name=".GuestActivity" />
         <activity android:name=".GeneratingCodeActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".VoteRoleplayerActivity"/>
-        <activity android:name=".VoteAuxilaryRoleplayerActivity"/>
+        <activity android:name=".VoteRoleplayerActivity" />
+        <activity android:name=".VoteAuxilaryRoleplayerActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

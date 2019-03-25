@@ -27,7 +27,7 @@ public class AddAuxilaryRoleplayerActivity extends AppCompatActivity {
         roleCardList.add(new RoleCard("Hark Master",""));
 
         membersList = new ArrayList();
-        Intent i=new Intent(getApplicationContext(),GuestActivity.class);
+        Intent i=new Intent(getApplicationContext(),AddPreparedSpeaker.class);
         customAdapter=new CustomAdapter(AddAuxilaryRoleplayerActivity.this,roleCardList,FirebaseUtils.getMembersList(),i);
         listView.setAdapter(customAdapter);
     }

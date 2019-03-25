@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddRoleDynamic"
+    android:background="@color/colorBluish"
+    android:layout_gravity="end">
+
+    <TextView
+        android:id="@+id/roleplayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="Add Prepared Speakers"
+        android:textAppearance="@style/roleplayers"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/listps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorBluish"
+        android:divider="@drawable/line"
+        android:dividerHeight="2.5dp"
+        app:layout_constraintBottom_toTopOf="@+id/helpertextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/helpertextView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp"></TextView>
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/myFABPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/colorReddish"
+        app:borderWidth="2dp"
+        app:elevation="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorBluish" />
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/myFABPSnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_done_black_24dp"
+        app:backgroundTint="@color/colorGreenish"
+        app:borderWidth="2dp"
+        app:elevation="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorBluish" />
+
+</android.support.constraint.ConstraintLayout>
