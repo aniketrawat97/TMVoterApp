@@ -17,7 +17,7 @@
         <activity android:name=".AddTableTopicSpeakerActivity" />
         <activity android:name=".UseAsActivity" />
         <activity android:name=".AddAuxilaryRoleplayerActivity" />
-        <activity android:name=".AddRoleDynamic" />
+        <activity android:name=".AddRoleplayer" />
         <activity android:name=".PasswordActivity" />
         <activity android:name=".MeetingCodeActivity" />
         <activity android:name=".GuestActivity" />

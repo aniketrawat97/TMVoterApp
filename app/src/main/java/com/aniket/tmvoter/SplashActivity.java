@@ -88,7 +88,7 @@ public class SplashActivity extends AppCompatActivity {
             firePrep = new Runnable() {
                 @Override
                 public void run() {
-                    Intent i = new Intent(getApplicationContext(), UseAsActivity.class);
+                    Intent i = new Intent(getApplicationContext(),UseAsActivity.class);
                     startActivity(i);
                     finish();
                 }

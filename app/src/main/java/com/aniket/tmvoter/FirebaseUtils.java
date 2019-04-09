@@ -168,5 +168,6 @@ public class FirebaseUtils {
         int votes=Integer.parseInt( votesList.get(index) )+1;
         votesList.set( index,Integer.toString(votes));
         Log.i("votes", "Votes - "+FirebaseUtils.votesList.get(index));
+        updateCandidateName(nameList.get(index),role,votes);
     }
 }
