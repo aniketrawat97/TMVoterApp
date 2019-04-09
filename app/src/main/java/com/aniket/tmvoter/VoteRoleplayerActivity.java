@@ -20,7 +20,7 @@ public class VoteRoleplayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bestroleplayer);
+        setContentView(R.layout.activity_vote_roleplayer);
         listView=findViewById(R.id.listvoterp);
 
         roleCardList=new ArrayList<>();

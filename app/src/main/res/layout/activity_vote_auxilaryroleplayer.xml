@@ -20,9 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="Best Roleplayer"
+            android:text="Vote for Best Auxilary Roleplayer"
             android:textAppearance="@style/roleplayers"
-            android:textSize="25dp"/>
+            android:textSize="20dp"/>
     </RelativeLayout>
 
     <ListView

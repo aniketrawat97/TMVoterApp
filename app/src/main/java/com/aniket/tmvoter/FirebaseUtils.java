@@ -140,7 +140,7 @@ public class FirebaseUtils {
         return votesList.get(i);
     }
 
-    public static String rolePlayerType(String role,String name){
+    public static String rolePlayerType(String role){
 
         if(role.equals("Timer")||role.equals("Ah Counter")||role.equals("Hark Master")){
             return "ARP";
@@ -148,11 +148,14 @@ public class FirebaseUtils {
         if(role.equals("Toastmaster Of The Day")||role.equals("TableTopic Master")||role.equals("Grammarian")||role.equals("General Evaluator")){
             return "RP";
         }
-        if(role.subSequence(0,10).equals("TableTopic")){
+        if(role.substring(0,10).equals("TableTopic")){
             return "TT";
         }
-        if(role.subSequence(0,10).equals("TableTopic")){
-            return "TT";
+        if(role.substring(0,9).equals("Evaluator")){
+            return "EV";
+        }
+        if(role.substring(0,8).equals("Prepared")){
+            return "PS";
         }
         return "NONE";
     }
