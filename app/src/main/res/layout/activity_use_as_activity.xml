@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/cicle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="25dp"
-        android:src="@drawable/circle"
+        android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/use_as"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -161,7 +161,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/cicle"
         app:layout_constraintEnd_toEndOf="@+id/cicle"
         app:layout_constraintStart_toStartOf="@+id/cicle"
-        app:layout_constraintTop_toTopOf="@+id/cicle" />
+        app:layout_constraintTop_toTopOf="@+id/cicle"
+        android:visibility="invisible"/>
 
 
 </android.support.constraint.ConstraintLayout>

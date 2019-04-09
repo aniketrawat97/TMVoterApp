@@ -20,7 +20,7 @@ public class VoteAuxilaryRoleplayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_best_auxilaryroleplayer);
+        setContentView(R.layout.activity_vote_auxilaryroleplayer);
         listView=findViewById(R.id.list_vote_arp);
 
         roleCardList=new ArrayList<>();
@@ -28,7 +28,8 @@ public class VoteAuxilaryRoleplayerActivity extends AppCompatActivity {
         roleCardList.add(new RoleCard("Ah Counter",FirebaseUtils.getRolePlayer("Ah Counter"),true));
         roleCardList.add(new RoleCard("Hark Master",FirebaseUtils.getRolePlayer("Hark Master"),true));
 
-        Intent i=new Intent(getApplicationContext(),GuestActivity.class);
+        Intent i=new Intent(getApplicationContext(),VotePrepSpeakerActivity.class);
+
         customAdapter=new CustomAdapter(VoteAuxilaryRoleplayerActivity.this,roleCardList,FirebaseUtils.getMembersList(),i);
         listView.setAdapter(customAdapter);
 
@@ -39,7 +40,7 @@ public class VoteAuxilaryRoleplayerActivity extends AppCompatActivity {
                 Log.i("votes", roleTemp.getText().toString());
                 String rolename=roleTemp.getText().toString();
                 FirebaseUtils.incrementVotes(rolename);
-                startActivity(new Intent(getApplicationContext(),GuestActivity.class));
+                startActivity(new Intent(getApplicationContext(),VotePrepSpeakerActivity.class));
             }
         });
 

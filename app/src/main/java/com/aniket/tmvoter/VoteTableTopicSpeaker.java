@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VoteEvaluaterActivity extends AppCompatActivity {
+public class VoteTableTopicSpeaker extends AppCompatActivity {
     CustomAdapter customAdapter;
     ListView listView;
     List<RoleCard> roleCardList;
@@ -20,24 +20,28 @@ public class VoteEvaluaterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vote_evaluator);
-        int evalNo=0;
-        listView=findViewById(R.id.list_vote_eval);
+        setContentView(R.layout.activity_vote_table_topic_speaker);
+        int ttNo=0;
+        listView=findViewById(R.id.list_vote_tts);
 
         roleCardList=new ArrayList<>();
 
 
-        Intent i=new Intent(getApplicationContext(),VoteTableTopicSpeaker.class);
+        Intent i=new Intent(getApplicationContext(),GuestActivity.class);
 
-        customAdapter=new CustomAdapter(VoteEvaluaterActivity.this,roleCardList,FirebaseUtils.getMembersList(),i);
+        customAdapter=new CustomAdapter(VoteTableTopicSpeaker.this,roleCardList,FirebaseUtils.getMembersList(),i);
 
-        for(int j=0;j<FirebaseUtils.votesList.size();j++){
-            Log.i("info", FirebaseUtils.roleList.get(j));
-            if(FirebaseUtils.rolePlayerType(FirebaseUtils.roleList.get(j)).equals("EV")){
-                evalNo++;
-                Log.i("info", "Evaluator found at "+j);
-                roleCardList.add(new RoleCard("Evaluator "+evalNo,FirebaseUtils.getRolePlayer("Evaluator "+evalNo),true));
+        try {
+            for (int j = 0; j < FirebaseUtils.votesList.size(); j++) {
+                Log.i("info", FirebaseUtils.roleList.get(j));
+                if (FirebaseUtils.rolePlayerType(FirebaseUtils.roleList.get(j)).equals("TT")) {
+                    ttNo++;
+                    Log.i("info", "TableTopic Speaker found at " + j);
+                    roleCardList.add(new RoleCard("TableTopic Speaker " + ttNo, FirebaseUtils.getRolePlayer("TableTopic Speaker " + ttNo), true));
+                }
             }
+        }catch (Exception e){
+            Log.i("info", "Exception - "+e);
         }
 
         listView.setAdapter(customAdapter);
@@ -49,7 +53,7 @@ public class VoteEvaluaterActivity extends AppCompatActivity {
                 Log.i("votes", roleTemp.getText().toString());
                 String rolename=roleTemp.getText().toString();
                 FirebaseUtils.incrementVotes(rolename);
-                startActivity(new Intent(getApplicationContext(),VoteTableTopicSpeaker.class));
+                startActivity(new Intent(getApplicationContext(),GuestActivity.class));
             }
         });
 
