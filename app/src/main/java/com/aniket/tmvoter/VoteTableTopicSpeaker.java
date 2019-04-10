@@ -1,6 +1,7 @@
 package com.aniket.tmvoter;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class VoteTableTopicSpeaker extends AppCompatActivity {
     CustomAdapter customAdapter;
     ListView listView;
     List<RoleCard> roleCardList;
-
+    Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,7 @@ public class VoteTableTopicSpeaker extends AppCompatActivity {
         roleCardList=new ArrayList<>();
 
 
-        Intent i=new Intent(getApplicationContext(),GuestActivity.class);
+        i=new Intent(getApplicationContext(),MeetingCodeActivity.class);
 
         customAdapter=new CustomAdapter(VoteTableTopicSpeaker.this,roleCardList,FirebaseUtils.getMembersList(),i);
 
@@ -53,9 +55,38 @@ public class VoteTableTopicSpeaker extends AppCompatActivity {
                 Log.i("votes", roleTemp.getText().toString());
                 String rolename=roleTemp.getText().toString();
                 FirebaseUtils.incrementVotes(rolename);
-                startActivity(new Intent(getApplicationContext(),GuestActivity.class));
+                if(FirebaseUtils.isAdmin){
+                    i=new Intent(getApplicationContext(),ScoreBoardActivity.class);
+                }else{
+                    i=new Intent(getApplicationContext(),ThankyouActivity.class);
+                }
+                startActivity(i);
             }
         });
 
+    }
+
+
+    //To make Double Back press to exit
+
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }

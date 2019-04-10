@@ -1,6 +1,5 @@
 package com.aniket.tmvoter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -23,6 +22,8 @@ public class FirebaseUtils {
     static DatabaseReference ref;
     static DataSnapshot snapshot;
     static ArrayList<String> nameList,roleList,votesList;
+    static boolean isAdmin=false;
+    static boolean voted=false;
 
 
     public static void prepareDatabase(){
@@ -169,5 +170,8 @@ public class FirebaseUtils {
         votesList.set( index,Integer.toString(votes));
         Log.i("votes", "Votes - "+FirebaseUtils.votesList.get(index));
         updateCandidateName(nameList.get(index),role,votes);
+    }
+    public void initializeDB(){
+        ref = FirebaseDatabase.getInstance().getReference();
     }
 }
