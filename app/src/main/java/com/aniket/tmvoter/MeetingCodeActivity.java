@@ -2,17 +2,20 @@ package com.aniket.tmvoter;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,6 +61,21 @@ public class MeetingCodeActivity extends AppCompatActivity {
 
     public void onTextChange(EditText et){
 
+        et.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
+
+                if(keyCode == KeyEvent.KEYCODE_DEL) {
+
+                    //this is for backspace
+                    c[it-1].requestFocus();
+                }
+                return false;
+            }
+        });
+
         et.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -76,6 +94,7 @@ public class MeetingCodeActivity extends AppCompatActivity {
                         tryAgain.setVisibility(View.VISIBLE);
                         tryAgain.setText("Correct Code");
                         tryAgain.setTextColor(Color.GREEN);
+                        finish();
                         startActivity(new Intent(getApplicationContext(),VoteRoleplayerActivity.class));
                     }
                     else{
@@ -92,5 +111,28 @@ public class MeetingCodeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    //To make Double Back press to exit
+
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 }

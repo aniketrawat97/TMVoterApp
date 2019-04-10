@@ -40,6 +40,7 @@ package com.aniket.tmvoter;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
@@ -79,27 +80,40 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        //noInternet = findViewById(R.id.nointernet);
+        noInternet = findViewById(R.id.nointernet);
+
         FirebaseUtils.prepareDatabase();
-       // noInternet.setVisibility(View.INVISIBLE);
+
+        noInternet.setVisibility(View.INVISIBLE);
         handler = new Handler();
 
         if (isNetworkAvailable(this)) {
             firePrep = new Runnable() {
                 @Override
                 public void run() {
-                    Intent i = new Intent(getApplicationContext(),UseAsActivity.class);
-                    startActivity(i);
-                    finish();
+                    Intent i = new Intent(getApplicationContext(),/*ACTIVITY NAME HERE-->>*/ UseAsActivity /*<--ACTIVITY NAME HERE*/.class);
+                    /*if(FirebaseUtils.snapshot.child("active").getValue().equals("no")){
+                        noInternet.setText("DEACTIVATED");
+                    }else{*/
+                        startActivity(i);
+                        finish();
+                    //}
+
                 }
             };
         } else {
             noInternet.setVisibility(View.VISIBLE);
-
         }
-
-        handler.postDelayed(firePrep, 3000);
-
+        checkIfVoted();
+    }
+    void checkIfVoted(){
+        SharedPreferences sp=getApplicationContext().getSharedPreferences("voting",Context.MODE_PRIVATE);
+        if(sp.getBoolean("voted",false)){
+            noInternet.setText("YOU ALREADY VOTED");
+            noInternet.setVisibility(View.VISIBLE);
+        }else{
+            handler.postDelayed(firePrep, 3000);
+        }
     }
 
 

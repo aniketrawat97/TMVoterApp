@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/android_3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorReddish">
+
+
+    <ImageView
+        android:id="@+id/cicle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/line_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+
+    <TextView
+        android:id="@+id/thankyou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cicle"
+        android:layout_marginBottom="20dp"
+        android:elevation="7dp"
+        android:text="Thankyou for voting"
+        android:textAppearance="@style/use_as"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/line_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cicle"
+        android:layout_marginTop="15dp"
+        android:elevation="7dp"
+        android:text="Your identity is Anonymous"
+        android:textAppearance="@style/use_as"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/exitBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="40dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/cicle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thankyou" />
+
+
+    <TextView
+        android:id="@+id/exitBox"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@id/voterbox"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rectangle_voter"
+        android:elevation="5dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="EXIT"
+        android:textColor="@color/colorReddish"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identity" />
+
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/identity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cicle" />
+
+
+</android.support.constraint.ConstraintLayout>

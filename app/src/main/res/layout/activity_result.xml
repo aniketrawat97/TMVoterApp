@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:background="#FFFFFF">
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/prepspeaker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed">
 
 
         <TextView
@@ -16,8 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/result"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="33dp"
             android:textAppearance="@style/roleplayers" />
 
     </LinearLayout>
@@ -26,70 +37,84 @@
     <TextView
         android:id="@+id/prepspeaker"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="@string/prepspeaker"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:background="#EC7373"
+        android:gravity="center"
+        android:text="@string/prepspeaker"
         android:textAlignment="center"
-        android:textAppearance="@style/prepared_sp" />
+        android:textAppearance="@style/prepared_sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
 
-
-    <View
-        android:id="@+id/line_1"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
 
     <RelativeLayout
         android:id="@+id/cardone"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#EC7373">
-
-
-    <TextView
-        android:id="@+id/best"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/best"
-        android:textAppearance="@style/prepared_sp" />
+        android:layout_marginBottom="2dp"
+        android:background="#EC7373"
+        app:layout_constraintBottom_toTopOf="@+id/cardtwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prepspeaker"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tm_shurti"
-        android:layout_marginStart="115dp"
-        android:layout_toEndOf="@id/best"
-        android:textAppearance="@style/prepared_sp" />
-
-    <TextView
-        android:id="@+id/count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/count"
-        android:layout_marginStart="115dp"
-        android:layout_toEndOf="@id/name"
-        android:textAppearance="@style/prepared_sp" />
+        <TextView
+            android:id="@+id/best"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/best"
+            android:textAppearance="@style/prepared_sp"
+            android:layout_marginStart="20dp"
+            />
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/nameps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_toEndOf="@id/best"
+            android:text="@string/tm_shurti"
+            android:textAppearance="@style/prepared_sp" />
 
-    <View
-        android:id="@+id/line_2"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/count"
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"
+            />
 
+
+    </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/cardtwo"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#EC7373">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#EC7373"
+        app:layout_constraintBottom_toTopOf="@+id/ttspeaker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardone"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
 
         <TextView
@@ -97,62 +122,66 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/second"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:layout_marginStart="20dp"
+            />
 
 
         <TextView
-            android:id="@+id/namesecond"
+            android:id="@+id/namepssecond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tm_shurti"
-            android:layout_marginStart="87dp"
+            android:layout_marginStart="18dp"
             android:layout_toEndOf="@id/second"
+            android:text="@string/tm_shurti"
             android:textAppearance="@style/prepared_sp" />
 
         <TextView
             android:id="@+id/seccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="115dp"
-            android:layout_toEndOf="@id/namesecond"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
     </RelativeLayout>
-
-    <View
-        android:id="@+id/line_3"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
 
 
     <TextView
         android:id="@+id/ttspeaker"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="@string/ttspeaker"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         android:background="#5FA0B6"
+        android:gravity="center"
+        android:text="@string/ttspeaker"
         android:textAlignment="center"
-        android:textAppearance="@style/prepared_sp" />
-
-
-    <View
-        android:id="@+id/line_4"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
+        android:textAppearance="@style/prepared_sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardthree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardtwo"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
 
 
     <RelativeLayout
         android:id="@+id/cardthree"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#5FA0B6">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#5FA0B6"
+        app:layout_constraintBottom_toTopOf="@+id/cardfour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttspeaker"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
 
         <TextView
@@ -160,26 +189,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/best"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:layout_marginStart="20dp"
+
+            />
 
 
         <TextView
             android:id="@+id/ttname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tm_shurti"
-            android:layout_marginStart="115dp"
+            android:layout_marginStart="48dp"
             android:layout_toEndOf="@id/ttbest"
+            android:text="@string/tm_shurti"
             android:textAppearance="@style/prepared_sp" />
 
         <TextView
             android:id="@+id/ttbcount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="115dp"
-            android:layout_toEndOf="@id/ttname"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
     </RelativeLayout>
@@ -187,8 +220,17 @@
     <RelativeLayout
         android:id="@+id/cardfour"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#5FA0B6">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#5FA0B6"
+        app:layout_constraintBottom_toTopOf="@+id/cardfive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardthree"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
 
 
         <TextView
@@ -196,47 +238,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/second"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:layout_marginStart="20dp"
+            />
 
 
         <TextView
             android:id="@+id/ttsecname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tm_shurti"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="20dp"
             android:layout_toEndOf="@id/ttsecond"
+            android:text="@string/tm_shurti"
             android:textAppearance="@style/prepared_sp" />
 
         <TextView
             android:id="@+id/ttseccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="115dp"
-            android:layout_toEndOf="@id/ttsecname"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
     </RelativeLayout>
 
 
-
-
-
-    <View
-        android:id="@+id/line_5"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
-
     <RelativeLayout
         android:id="@+id/cardfive"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="#5FA0B6">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="#5FA0B6"
+        app:layout_constraintBottom_toTopOf="@+id/cardrole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardfour"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
 
 
         <TextView
@@ -244,65 +286,69 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/three"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:layout_marginStart="20dp"
+            />
 
 
         <TextView
             android:id="@+id/tthreename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tm_shurti"
-            android:layout_marginStart="110dp"
+            android:layout_marginStart="40dp"
             android:layout_toEndOf="@id/tthree"
-            android:textAppearance="@style/prepared_sp" />
+            android:text="@string/tm_shurti"
+            android:textAppearance="@style/prepared_sp"
+
+            android:textSize="18dp"/>
 
         <TextView
             android:id="@+id/tthreecount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="115dp"
-            android:layout_toEndOf="@id/tthreename"
-            android:textAppearance="@style/prepared_sp" />
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/line_7"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
     <RelativeLayout
         android:id="@+id/cardrole"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="#5FA0B6">
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorReddish"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/cardauxrole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardfive">
 
 
         <TextView
             android:id="@+id/roleplayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:text="@string/bestroleplayer"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="30dp"
             android:textAppearance="@style/ttmaster"
-            />
+            android:textSize="21dp" />
 
         <TextView
             android:id="@+id/rolecount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/roleplayer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="155dp"
-            android:layout_marginTop="25dp"
-            android:layout_toEndOf="@id/roleplayer"
-            android:textAppearance="@style/prepared_sp" />
-
-
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
         <TextView
@@ -310,49 +356,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/roleplayer"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
+            android:text="@string/tm_zakiuddi"
+            android:textAppearance="@style/tm_zakiuddi" />
 
     </RelativeLayout>
-
-    <View
-        android:id="@+id/line_8"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
 
     <RelativeLayout
         android:id="@+id/cardauxrole"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="#EC7373">
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorBluish"
+        app:layout_constraintBottom_toTopOf="@+id/cardeval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardrole">
 
 
         <TextView
             android:id="@+id/auxroleplayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:text="@string/bestauxroleplayers"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="30dp"
             android:textAppearance="@style/ttmaster"
+            android:textSize="21dp"
+
             />
 
         <TextView
             android:id="@+id/roleauxcount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/auxroleplayer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
             android:text="@string/count"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="25dp"
-            android:layout_toEndOf="@id/auxroleplayer"
-            android:textAppearance="@style/prepared_sp" />
-
-
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
         <TextView
@@ -360,67 +405,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/auxroleplayer"
-            android:text="@string/tm_zakiuddi"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:textAppearance="@style/tm_zakiuddi"
-            />
+            android:text="@string/tm_zakiuddi"
+            android:textAppearance="@style/tm_zakiuddi" />
 
     </RelativeLayout>
-
-    <View
-        android:id="@+id/line_9"
-        android:layout_width="300dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="65dp"
-        android:background="#FFFFFF" />
-
-
 
 
     <RelativeLayout
         android:id="@+id/cardeval"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="#5FA0B6">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorReddish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardauxrole">
 
 
-    <TextView
-        android:id="@+id/evaluater"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bestevaluater"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="30dp"
-        android:textAppearance="@style/ttmaster"
-        />
+        <TextView
+            android:id="@+id/evaluater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/bestevaluater"
+            android:textAppearance="@style/ttmaster"
+            android:textSize="21dp" />
 
-    <TextView
-        android:id="@+id/evalcount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/count"
-        android:layout_marginStart="185dp"
-        android:layout_marginTop="25dp"
-        android:layout_toEndOf="@id/evaluater"
-        android:textAppearance="@style/prepared_sp" />
+        <TextView
+            android:id="@+id/evalcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/evaluater"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/count"
+            android:textAppearance="@style/prepared_sp"
+            android:visibility="invisible"/>
 
 
-
-
-    <TextView
-        android:id="@+id/evaluatername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/evaluater"
-        android:text="@string/tm_zakiuddi"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:textAppearance="@style/tm_zakiuddi"
-        />
+        <TextView
+            android:id="@+id/evaluatername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/evaluater"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tm_zakiuddi"
+            android:textAppearance="@style/tm_zakiuddi" />
     </RelativeLayout>
 
 
-
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
