@@ -87,23 +87,33 @@ public class SplashActivity extends AppCompatActivity {
         noInternet.setVisibility(View.INVISIBLE);
         handler = new Handler();
 
-        if (isNetworkAvailable(this)) {
-            firePrep = new Runnable() {
-                @Override
-                public void run() {
-                    Intent i = new Intent(getApplicationContext(),/*ACTIVITY NAME HERE-->>*/ UseAsActivity /*<--ACTIVITY NAME HERE*/.class);
-                    /*if(FirebaseUtils.snapshot.child("active").getValue().equals("no")){
-                        noInternet.setText("DEACTIVATED");
-                    }else{*/
+        firePrep = new Runnable() {
+            @Override
+            public void run() {
+                if(FirebaseUtils.dbPrepared){
+
+                    if(FirebaseUtils.snapshot.child("active").getValue().equals("yes")){
+                        Intent i = new Intent(getApplicationContext(),/*ACTIVITY NAME HERE-->>*/ UseAsActivity /*<--ACTIVITY NAME HERE*/.class);
                         startActivity(i);
                         finish();
-                    //}
-
+                    }
+                    else{
+                        noInternet.setVisibility(View.VISIBLE);
+                        noInternet.setText("DEACTIVATED\n( Contact Admin )");
+                    }
                 }
-            };
+                else{
+                    handler.post(firePrep);
+                }
+            }
+        };
+
+        if (isNetworkAvailable(this)) {
+
         } else {
             noInternet.setVisibility(View.VISIBLE);
         }
+
         checkIfVoted();
     }
     void checkIfVoted(){
@@ -112,9 +122,7 @@ public class SplashActivity extends AppCompatActivity {
             noInternet.setText("YOU ALREADY VOTED");
             noInternet.setVisibility(View.VISIBLE);
         }else{
-            handler.postDelayed(firePrep, 3000);
+            handler.postDelayed(firePrep, 2500);
         }
     }
-
-
 }

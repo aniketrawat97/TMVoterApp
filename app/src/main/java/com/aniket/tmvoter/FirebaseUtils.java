@@ -23,7 +23,8 @@ public class FirebaseUtils {
     static DataSnapshot snapshot;
     static ArrayList<String> nameList,roleList,votesList;
     static boolean isAdmin=false;
-    static boolean voted=false;
+    static boolean dbPrepared=false;
+
 
 
     public static void prepareDatabase(){
@@ -49,6 +50,8 @@ public class FirebaseUtils {
                 prepareMeetingCode();
                 preparePassword();
                 prepareVotes();
+                dbPrepared=true;
+                Log.i("timing", "DB_PREPARED");
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {}
